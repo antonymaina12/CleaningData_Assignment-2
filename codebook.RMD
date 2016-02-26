@@ -38,6 +38,9 @@ The set of variables that were estimated from these signals are:
 
 * mean(): Mean value
 * std(): Standard deviation
+
+The variables below were included in the seperate datafiles, but were dropped for the final tidy data set.
+
 * mad(): Median absolute deviation 
 * max(): Largest value in array
 * min(): Smallest value in array
@@ -52,7 +55,7 @@ The set of variables that were estimated from these signals are:
 * skewness(): skewness of the frequency domain signal 
 * kurtosis(): kurtosis of the frequency domain signal 
 * bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-* angle(): Angle between to vectors.  
+* angle(): Angle between to vectors.
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:  
 
@@ -62,4 +65,14 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is available in 'features.txt'
+The complete list of variables of each feature vector is available in 'features.txt'  
+The following activities were measured:
+
+1. WALKING
+2. WALKING UPSTAIRS
+3. WALKING DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING  
+
+The subject variable lists the number of the participant in the study.

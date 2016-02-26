@@ -6,7 +6,7 @@
 ##    independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Getting the data
-if(!file.exists("./data/smartphone.zip")){
+if(!dir.exists("./data/UCI HAR Dataset/")){
     dir.create("./data")
     geturl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
     download.file(geturl, "./data/smartphone.zip")
@@ -62,6 +62,7 @@ train <- train %>%
 ## Creating the complete dataset
 data <- bind_rows(test, train)
 
+## Creating the tidy dataset
 tidydata <- data %>%
     group_by(subject, activity) %>%
     summarise_each(funs(mean))
